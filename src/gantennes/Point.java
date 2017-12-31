@@ -25,6 +25,14 @@ public class Point extends JPanel{
         this.x=x;
         this.y=y;
     }
+    
+    public void changerX(){
+        this.x +=10;
+       /* Graphics2D gr = null;
+        gr.setColor(Color.BLUE);
+        Image img = Toolkit.getDefaultToolkit().getImage(JFrame.class.getResource("/images/Triangle.png"));
+        gr.drawImage(img, x, y, this);*/
+    }
    
     
     @Override

@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright (C) 2016 Mátyás Gede <saman at map.elte.hu>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
--->
-
-<project name="ImageViewer" default="default" basedir=".">
-    <description>Builds, tests, and runs the project ImageViewer.</description>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="test" default="default" basedir=".">
+    <description>Builds, tests, and runs the project test.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
@@ -67,7 +58,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     An example of overriding the target for project execution could look like this:
 
-        <target name="run" depends="ImageViewer-impl.jar">
+        <target name="run" depends="test-impl.jar">
             <exec dir="bin" executable="launcher.exe">
                 <arg file="${dist.jar}"/>
             </exec>

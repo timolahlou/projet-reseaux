@@ -1,1 +1,2 @@
 1) créer une image qui ce deplace (on change le x)
+2) zoom d'une image

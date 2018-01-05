@@ -2,3 +2,4 @@
 2) zoom d'une image
 3) placer les antennes sur l'image
 4) rapport
+5) présentation

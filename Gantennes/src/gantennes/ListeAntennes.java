@@ -31,7 +31,7 @@ public class ListeAntennes extends javax.swing.JFrame {
         initComponents();
          
         try {
-                Path path = Paths.get("C:\\Users\\nadorfix\\Documents\\NetBeansProjects\\Gantennes\\antennes.txt");
+                Path path = Paths.get("C:\\Users\\Nabil\\Desktop\\Gantennes\\Gantennes\\antennes.txt");
                 List<String> list = Files.readAllLines(path,Charset.forName("ISO-8859-1"));
                 DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
                 int i=0;

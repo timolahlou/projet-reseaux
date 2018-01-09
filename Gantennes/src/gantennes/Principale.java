@@ -7,6 +7,8 @@ package gantennes;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -17,6 +19,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -32,7 +35,7 @@ public class Principale extends javax.swing.JFrame {
         super("Réseau Mobile");
         initComponents();
         try {
-                Path path = Paths.get("C:\\Users\\nadorfix\\Desktop\\Reseau\\Gantennes\\antennes.txt");
+                Path path = Paths.get("C:\\Users\\Nabil\\Desktop\\Gantennes\\Gantennes\\antennes.txt");
                 List<String> list = Files.readAllLines(path,Charset.forName("ISO-8859-1"));
                 DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
                 int i=0;
@@ -50,6 +53,39 @@ public class Principale extends javax.swing.JFrame {
                 Logger.getLogger(ListeAntennes.class.getName()).log(Level.SEVERE, null, ex);
             }
         
+        addWindowListener(new WindowListener() {
+            @Override
+            public void windowOpened(WindowEvent e) {
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+                if (JOptionPane.showConfirmDialog(PanelPrincial, "voulez-vous vraiment quitter") == JOptionPane.OK_OPTION) {
+                    PanelPrincial.setVisible(false);
+                   dispose();
+                }
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+            }
+        });
     }
 
     /**
@@ -132,7 +168,7 @@ public class Principale extends javax.swing.JFrame {
         });
         menu.add(liste, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 100, 60));
 
-        antenne.setIcon(new javax.swing.ImageIcon("C:\\Users\\nadorfix\\Desktop\\Reseau\\Gantennes\\src\\images\\Triangle.png")); // NOI18N
+        antenne.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nabil\\Desktop\\Gantennes\\Gantennes\\src\\images\\Triangle.png")); // NOI18N
         antenne.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 antenneMouseClicked(evt);
@@ -236,7 +272,7 @@ public class Principale extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\nadorfix\\Desktop\\Reseau\\mulhouse.JPG")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gantennes/mulhouse.JPG"))); // NOI18N
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -434,7 +470,7 @@ public class Principale extends javax.swing.JFrame {
         
         
         try {
-                Path path = Paths.get("C:\\Users\\nadorfix\\Documents\\NetBeansProjects\\Gantennes\\antennes.txt");
+                Path path = Paths.get("C:\\Users\\Nabil\\Desktop\\Gantennes\\Gantennes\\antennes.txt");
                 List<String> list = Files.readAllLines(path,Charset.forName("ISO-8859-1"));
                 int i=0;
                 int j=1;
@@ -478,7 +514,7 @@ public class Principale extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         model.addRow(new Object[]{nom.getText(),x.getText(),y.getText()});
-        Path path = Paths.get("C:\\Users\\nadorfix\\Desktop\\Reseau\\Gantennes\\antennes.txt");
+        Path path = Paths.get("C:\\Users\\Nabil\\Desktop\\Gantennes\\Gantennes\\antennes.txt");
         String a = nom.getText();
         String b = x.getText();
         String c = y.getText();
@@ -505,7 +541,7 @@ public class Principale extends javax.swing.JFrame {
 
     private void jLabel5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseDragged
         // TODO add your handling code here:
-        jLabel1.setLocation(evt.getX(), evt.getY());
+      //  jLabel1.setLocation(evt.getX(), evt.getY());
     }//GEN-LAST:event_jLabel5MouseDragged
 
     private void jPanel3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseDragged

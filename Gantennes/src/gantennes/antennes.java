@@ -78,7 +78,7 @@ public class antennes extends JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\nadorfix\\Desktop\\Reseau\\mulhouse.JPG")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gantennes/mulhouse.JPG"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -163,7 +163,6 @@ public class antennes extends JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\nadorfix\\Desktop\\Reseau\\Gantennes\\src\\images\\Triangle.png")); // NOI18N
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -289,7 +288,7 @@ public class antennes extends JFrame {
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
         try {
-                Path path = Paths.get("C:\\Users\\nadorfix\\Documents\\NetBeansProjects\\Gantennes\\antennes.txt");
+                Path path = Paths.get("C:\\Users\\Nabil\\Desktop\\Gantennes\\Gantennes\\antennes.txt");
                 List<String> list = Files.readAllLines(path,Charset.forName("ISO-8859-1"));
                 int i=0;
                 int j=1;

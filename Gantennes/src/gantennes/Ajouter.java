@@ -167,7 +167,7 @@ public class Ajouter extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         model.addRow(new Object[]{nom.getText(),x.getText(),y.getText()});
-        Path path = Paths.get("C:\\Users\\nadorfix\\Documents\\NetBeansProjects\\Gantennes\\antennes.txt");
+        Path path = Paths.get("C:\\Users\\Nabil\\Desktop\\Gantennes\\Gantennes\\antennes.txt");
         String a = nom.getText();
         String b = x.getText();
         String c = y.getText();
